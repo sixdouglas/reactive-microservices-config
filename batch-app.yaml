@@ -15,13 +15,11 @@ datasource:
     url: jdbc:mariadb://localhost:7701/lessons-db
     username: lessons-user
     password: lessons-pwd-01
-    driver-class-name: org.mariadb.jdbc.Driver
     liquibase:
       change-log: classpath:/db/changelog/db.lessons.changelog-master.xml
   notations:
     url: jdbc:mariadb://localhost:7702/notations-db
     username: notations-user
     password: notations-pwd-01
-    driver-class-name: org.mariadb.jdbc.Driver
     liquibase:
       change-log: classpath:/db/changelog/db.notations.changelog-master.xml
