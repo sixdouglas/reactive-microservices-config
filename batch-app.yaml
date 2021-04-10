@@ -16,10 +16,10 @@ datasource:
     username: lessons-user
     password: lessons-pwd-01
     liquibase:
-      change-log: classpath:/db/changelog/db.lessons.changelog-master.xml
+      change-log: classpath:/db/changelog/db.lessons.changelog-master.yaml
   notations:
     jdbc-url: jdbc:mariadb://localhost:7702/notations-db
     username: notations-user
     password: notations-pwd-01
     liquibase:
-      change-log: classpath:/db/changelog/db.notations.changelog-master.xml
+      change-log: classpath:/db/changelog/db.notations.changelog-master.yaml
