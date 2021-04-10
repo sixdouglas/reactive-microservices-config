@@ -1,8 +1,16 @@
+auth0:
+  audience: ${ISSUER_AUDIANCE}
+
 spring:
   boot:
     admin:
       client:
         url: http://localhost:7900
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${ISSUER_ENDPOINT}
 
 server:
   forward-headers-strategy: native
