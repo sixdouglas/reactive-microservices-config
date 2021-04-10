@@ -1,3 +1,16 @@
 server:
   port: 7000
 
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: lessonModule
+          uri: http://localhost:7100/
+          predicates:
+              - Path=/lessons/**
+        - id: notationModule
+          uri: http://localhost:7200/
+          predicates:
+              - Path=/notations/**
+
