@@ -9,8 +9,12 @@ spring:
           uri: http://localhost:7100/
           predicates:
               - Path=/lessons/**
+          filters:
+              - RewritePath=/lessons(?<segment>/?.*), $\{segment}
         - id: notationModule
           uri: http://localhost:7200/
           predicates:
               - Path=/notations/**
+          filters:
+              - RewritePath=/notations(?<segment>/?.*), $\{segment}
 
